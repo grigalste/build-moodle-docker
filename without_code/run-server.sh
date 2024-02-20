@@ -8,8 +8,8 @@ SQL_DB_PASS=${SQL_DB_PASS:-moodle};
 HTTP_PROTO=${HTTP_PROTO:-http};
 HTTP_URL=${HTTP_URL:-localhost};
 
-chown -R www-data:www-data /var/www/html/appserver && \
-chmod -R 755 /var/www/html/* && \
+chown -R www-data:www-data /var/www/html/appserver 
+chmod -R 755 /var/www/html/* 
 
 sed -i "s/>dbtype.*/>dbtype    = '${SQL_DB_TYPE}';/g" /var/www/html/appserver/config.php 
 sed -i "s/>dblibrary.*/>dblibrary = 'native';/g" /var/www/html/appserver/config.php 
