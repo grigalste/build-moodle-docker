@@ -10,5 +10,6 @@ rm -rf ./moodle_git/-.* ./moodle_git/*.txt ;
 cp -f ./moodle_git/config-dist.php ./moodle_git/config.php
 
 #docker run -i -t -d -p 8080:8080 --name appserver --restart=always \
-#    -v ${PWD}/./moodle_git:/var/www/html/appserver \
+#    -v ${PWD}/moodle_git:/var/www/html/appserver \
+#    -v ${PWD}/run.sh:/run.sh \
 #    alste/php8.1-nocode:v0.1
