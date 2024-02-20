@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ ${DEBUG_SCRIPT} == "true"]; then
-    set -x
+if [ "${DEBUG_SCRIPT}" == "true" ]; then
+    set -x ;
 fi
 
 SQL_DB_TYPE=${SQL_DB_TYPE:-mariadb};
@@ -28,6 +28,5 @@ fi
 service php8.1-fpm start
 service nginx start
 
-cat /var/log/run-script.log
 tail -f /var/log/nginx/*.log &
 wait $!
